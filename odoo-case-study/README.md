@@ -1,7 +1,7 @@
 # Professional Portfolio: ERP Architecture & Implementation
-![Architecture Preview](./odoo-case-study/Technical Process Architecture — An end-to-end flow from customer demand (MTO) to serialised delivery.png)
 **Roy Chambers | Aerospace & Engineering Systems Specialist**
 
+![Technical Process Architecture](./odoo-case-study/architecture-flow.png)
 This repository serves as a live showcase of technical case studies and web applications focused on ERP (Odoo) implementation, process optimisation, and digital transformation within the aerospace sector.
 
 ---
