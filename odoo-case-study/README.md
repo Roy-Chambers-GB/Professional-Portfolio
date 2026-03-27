@@ -28,5 +28,5 @@ A comprehensive technical breakdown of a **Make-to-Order (MTO)** environment. Th
 ---
 
 ## 📫 Connect with Me
-* **LinkedIn:** [[Your LinkedIn Profile URL](https://www.linkedin.com/in/roy-chambers-82810018/)]
+* **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/roy-chambers-82810018/)
 * **Location:** Chichester, West Sussex, UK
