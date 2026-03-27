@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roy Chambers | IIoT Solution Architect Case Study</title>
+    <style>
+        /* Modern Architect Theme */
+        :root {
+            --aws-blue: #232f3e;
+            --aws-orange: #ff9900;
+            --bg-grey: #f4f7f9;
+            --text-dark: #16191f;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Prevents padding from breaking layout */
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 0;
+            background: var(--bg-grey);
+        }
+
+        header {
+            background: var(--aws-blue);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 6px solid var(--aws-orange);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        h2 {
+            border-left: 6px solid var(--aws-orange);
+            padding-left: 1rem;
+            color: var(--aws-blue);
+            margin-top: 2.5rem;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        /* IMAGE FIX: Forces large screenshots to fit */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1.5rem 0;
+            border: 1px solid #eaeded;
+            border-radius: 8px;
+        }
+
+        /* TABLE FIX: Ensures it's visible and responsive */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 500px;
+            border: 1px solid #eaeded;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 12px;
+            border: 1px solid #eaeded;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: var(--aws-blue);
+            font-size: 0.9rem;
+        }
+
+        .tag {
+            background: #eef1f3;
+            color: var(--aws-blue);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin: 3px;
+            display: inline-block;
+            border: 1px solid #d5dbdb;
+        }
+
+        /* ALERT ROW: Handles the two side-by-side images */
+        .alert-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .alert-row div {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #879596;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Multi-Tenant Industrial IoT Data Pipeline</h1>
+        <p>Secure OT-to-IT Architecture | London (eu-west-2)</p>
+        <div style="margin-top:15px;">
+            <span class="tag">mTLS</span> <span class="tag">Kinesis</span> <span class="tag">Lambda</span> <span
+                class="tag">SNS</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>1. The Solution Architecture</h2>
+        <p>A production-ready bridge between factory-floor assets and cloud intelligence. The architecture prioritises
+            **multi-tenant isolation** and **UK data residency**.</p>
+        <img src="OT-to-IT Data Pipeline.png" alt="Architecture Diagram">
+
+        <h2>2. Well-Architected Pillars</h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Pillar</th>
+                    <th>Implementation Detail</th>
+                </tr>
+                <tr>
+                    <td><strong>Security</strong></td>
+                    <td>X.509 mTLS at edge; IAM Least Privilege for cross-service calls.</td>
+                </tr>
+                <tr>
+                    <td><strong>Reliability</strong></td>
+                    <td>Amazon Kinesis buffering to manage high-velocity telemetry bursts.</td>
+                </tr>
+                <tr>
+                    <td><strong>Performance</strong></td>
+                    <td>Partition Key sharding by <code>tenant_id</code> for ordered scaling.</td>
+                </tr>
+                <tr>
+                    <td><strong>Cost</strong></td>
+                    <td>100% Serverless execution (Lambda/SNS) for zero-cost idle state.</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>3. Security Governance</h2>
+        <p>Enforcing strict access control via IAM. The following policy validates the secure interaction between the
+            IoT engine and SNS.</p>
+        <img src="AmazonSNSFullAccess.png" alt="IAM Governance">
+
+        <h2>4. Functional Proof: Real-Time Outcomes</h2>
+        <p>The system identifies overheating (Temp > 80°C) and dispatches alerts via SNS within milliseconds.</p>
+
+        <div class="alert-row">
+            <div>
+                <strong>Lambda Execution Logs</strong>
+                <img src="AWS CloudWatch Logs.png" alt="CloudWatch Logs">
+            </div>
+            <div>
+                <strong>User Notification (Outlook)</strong>
+                <img src="Outlook Inbox AWS Notifications .png" alt="Email Alerts">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 Roy Chambers | Chichester, West Sussex | AWS Solution Architect Project</p>
+    </div>
+
+</body>
+
+</html>
