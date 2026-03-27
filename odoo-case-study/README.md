@@ -1,7 +1,7 @@
 # Professional Portfolio: ERP Architecture & Implementation
 **Roy Chambers | Aerospace & Engineering Systems Specialist**
 
-![Technical Process Architecture](./odoo-case-study/architecture-flow.png)
+![Technical Process Architecture](https://raw.githubusercontent.com/Roy-Chambers-GB/Professional-Portfolio/main/odoo-case-study/architecture-flow.png)
 This repository serves as a live showcase of technical case studies and web applications focused on ERP (Odoo) implementation, process optimisation, and digital transformation within the aerospace sector.
 
 ---
